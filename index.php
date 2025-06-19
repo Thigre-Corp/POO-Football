@@ -50,8 +50,8 @@
     $transfert8 = new Transfert($man, $ronaldo, '2021');
 //fonction pour afficher les équipes d'un pays
     function afficherCartePays( Pays $pays){
-        echo "<div class='pays card bg-danger m-1' style='height:16em; width:16em;'><h3 class='card-title card-header text-truncate'>".$pays."</h3>";
-        echo "<div class='card-body'>
+        echo "<div class='pays card bg-danger m-1' style='height:16em; width:16em;'><h3 class='card-title card-header text-truncate p-0'>".$pays."</h3>";
+        echo "<div class='card-body position-absolute bottom-0'>
                 <ul class='list-group-flush  card-text'>";
         foreach($pays->getEquipes() as $equipe){
             echo "<li class='list-group-item bg-danger'>".$equipe."</li>";
@@ -60,9 +60,9 @@
     }
 //fonction pour afficher les transferts d'une équippe
     function afficherEquipes( Equipe $equipe){
-        echo "<div class='equipe card bg-warning m-1' style='height:16em; width:16em;'><div class='m-1'><h3 class='card-title card-header text-truncate'>".$equipe."</h3>";
+        echo "<div class='equipe card bg-warning m-1' style='height:16em; width:16em;'><div class='m-1'><h3 class='card-title card-header text-truncate p-0'>".$equipe."</h3>";
         echo "<h4 class='text-body-secondary fs-6'>".$equipe->getPays()." - ".$equipe->getAnneeCreation()."</h4>"; 
-        echo "<div class='card-body'>";
+        echo "<div class='card-body position-absolute bottom-0'>";
         echo "<ul class='list-group-flush card-text'>";
         foreach($equipe->gettransferts() as $transfert){
             echo "<li class='list-group-item bg-warning'>".$transfert."</li>";
@@ -71,13 +71,14 @@
     }
 //fonction pour afficher les carrières
     function afficherJoueur( Joueur $joueur){
-        echo "<div class='joueur card bg-success m-1 style='height:16em; width:16em;'><div class='card-body'><h3 class='card-title card-header text-truncate'>".$joueur."</h3>";
+        echo "<div class='joueur card bg-success m-1' style='height:16em; width:16em;'><div class='m-1'><h3 class='card-title card-header text-truncate p-0'>".$joueur."</h3>";
         echo "<h4 class='text-body-secondary fs-6'>".$joueur->getPays()." - ".$joueur->getAge()." ans</h4>";
-        echo "<ul class='list-group-flush bg-success  card-text'>";
+        echo "<div class='card-body position-absolute bottom-0'>
+                <ul class='list-group-flush bg-success  card-text'>";
         foreach($joueur->gettransferts() as $transfert){
             echo "<li class='list-group-item bg-success'>".$transfert->getEquipe()." (".$transfert->getDateString().")</li>";
         }
-        echo "</ul></div></div>";
+        echo "</ul></div></div></div>";
     }
 //appel cartes pays
     echo "<h2 class='text-danger text-center'>Pays</h2><div id='carte_pays' class='d-flex m-2 flex-wrap'>";
