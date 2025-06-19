@@ -3,11 +3,13 @@
 #carte_pays{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.pays{
+.pays{  
+    margin: 1em;
     background-color: rgba(165, 42, 42, 0.377);
-    border-radius: 10%;
+    border-radius: 5px;
 }
 
 #carte_equipes{
@@ -16,12 +18,14 @@
 }
 
 .equipe{
+    margin: 1em;
     background-color: rgba(42, 44, 165, 0.377);
-    border-radius: 10%;
+    border-radius: 5px;
 }
 .joueur{
+    margin: 1em;
     background-color: rgba(42, 165, 89, 0.377);
-    border-radius: 10%;
+    border-radius: 5px;
 }
 
 
