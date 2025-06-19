@@ -1,0 +1,31 @@
+
+
+#carte_pays{
+    display: flex;
+    flex-direction: row;
+}
+
+.pays{
+    background-color: rgba(165, 42, 42, 0.377);
+    border-radius: 10%;
+}
+
+#carte_equipes{
+    display: flex;
+    flex-direction: row;
+}
+
+.equipe{
+    background-color: rgba(42, 44, 165, 0.377);
+    border-radius: 10%;
+}
+.joueur{
+    background-color: rgba(42, 165, 89, 0.377);
+    border-radius: 10%;
+}
+
+
+#carte_joueurs{
+    display: flex;
+    flex-direction: row;
+}
