@@ -81,14 +81,14 @@
         echo "</ul></div></div></div>";
     }
 //appel cartes pays
-    echo "<h2 class='text-danger text-center'>Pays</h2><div id='carte_pays' class='d-flex m-2 flex-wrap'>";
+    echo "<h2 class='text-danger text-center'>Pays</h2><div id='carte_pays' class='d-flex m-2 mb-4 flex-wrap justify-content-center'>";
     afficherCartePays($france);
     afficherCartePays($espagne);
     afficherCartePays($angleterre);
     afficherCartePays($italie);
     echo "</div>";
 //appel cartes équipes
-    echo "<h2 class='text-warning text-center'>Equipes</h2><div id='carte_equipes' class='d-flex m-2 flex-wrap'>";
+    echo "<h2 class='text-warning text-center'>Equipes</h2><div id='carte_equipes' class='d-flex m-2 mb-4 flex-wrap justify-content-center'>";
     afficherEquipes($psg);
     afficherEquipes($rcs);
     afficherEquipes($fcb);
@@ -97,7 +97,7 @@
     afficherEquipes($rea);
     echo "</div>";
 //appel cartes Joueurs
-    echo "<h2 class='text-success text-center'>Joueurs</h2><div id='carte_joueurs' class='d-flex m-2 flex-wrap'>";
+    echo "<h2 class='text-success text-center'>Joueurs</h2><div id='carte_joueurs' class='d-flex m-2 mb-4 flex-wrap justify-content-center'>";
     afficherJoueur($mbappe);
     afficherJoueur($ronaldo);
     afficherJoueur($messi);
@@ -105,6 +105,6 @@
     echo "</div>";
 
 ?>
-    </div>
-</body>
-    </html>
+        </div>
+    </body>
+</html>
